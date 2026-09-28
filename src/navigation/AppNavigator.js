@@ -6,7 +6,7 @@ export default function AppNavigator(){
   if(!storageHydrated) return <View style={{flex:1,justifyContent:'center',alignItems:'center',backgroundColor:colors.background}} accessibilityLabel="Loading TrailMate"><ActivityIndicator size="large" color={colors.primary}/></View>;
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerBackTitle:'Back',headerTintColor:colors.primary,headerTitleStyle:{fontWeight:'800'},contentStyle:{backgroundColor:colors.background}}}>
+      <Stack.Navigator screenOptions={{headerBackTitle:'Back',headerTintColor:colors.primary,headerStyle:{backgroundColor:colors.surface},headerTitleStyle:{fontWeight:'800',color:colors.primary},headerShadowVisible:true,contentStyle:{backgroundColor:colors.background}}}>
         <Stack.Screen name="MainTabs" component={MainTabs} options={{headerShown:false}} />
         <Stack.Screen name="TrailDetails" component={TrailDetailsScreen} options={{headerShown:false}} />
         <Stack.Screen name="NotificationSettings" component={NotificationSettingsScreen} options={{title:'Notifications'}} />
